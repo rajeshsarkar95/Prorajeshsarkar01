@@ -7,7 +7,7 @@ function scrollTo(id: string) {
 const stats = [
   { number: "2+", label: "Years Exp." },
   { number: "15+", label: "Projects" },
-  { number: "10+", label: "Technologies" },
+  { number: "15+", label: "Technologies" },
 ];
 
 const floatingTags = [

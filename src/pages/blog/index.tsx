@@ -1,5 +1,12 @@
-const Blog = () => {
-  return <h1>Blog Page</h1>;
-};
+import React from 'react'
+import ImagesGalary from "@/components/sections/ImagesGalary";
 
-export default Blog;
+function index() {
+  return (
+    <div>
+     <ImagesGalary />
+    </div>
+  )
+}
+
+export default index

@@ -1,4 +1,4 @@
-import type { Skill, Project, Experience, Certification } from '@/types'
+import type { Skill, Project, Experience, Certification, GalleryImage } from '@/types'
 
 export const skills: Skill[] = [
   { name: 'React.js',            pct: 92 },
@@ -70,7 +70,7 @@ export const projects: Project[] = [
 
 export const experiences: Experience[] = [
   {
-    id: 'e1', company: 'Tech Startup (SaaS)', role: 'Full Stack Developer', period: '2023 — Present',
+    id: 'e1', company: 'Appsdelite Technology', role: 'Full Stack Developer', period: '2025 — Present',
     points: [
       'Architected microservice-based Node.js APIs serving 10 k+ daily requests',
       'Built responsive React dashboards reducing user task completion time by 40 %',
@@ -79,7 +79,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 'e2', company: 'Digital Agency', role: 'Junior Full Stack Developer', period: '2022 — 2023',
+    id: 'e2', company: 'CyberClipper Solutions LLP Dehradun', role: 'Junior Full  Stack Developer', period: '2025 — 2023',
     points: [
       'Developed 8+ client-facing web apps using React.js and Next.js',
       'Designed MongoDB schemas and built RESTful APIs with Express.js',
@@ -88,7 +88,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 'e3', company: 'Open Source & Freelance', role: 'Freelance Developer', period: '2021 — 2022',
+    id: 'e3', company: 'SofTech Pilibhit', role: 'Frontend Developer Intern', period: '2021 — 2022',
     points: [
       'Delivered 5+ end-to-end web applications for small businesses',
       'Provided SEO optimisation services improving organic traffic by 35 %',
@@ -104,4 +104,142 @@ export const certifications: Certification[] = [
   { id:'c4', icon:'⚡', color:'rgba(167,139,250,0.15)',iconColor:'#a78bfa',  title:'JavaScript Algorithms & DS',       issuer:'freeCodeCamp',            date:'2022' },
   { id:'c5', icon:'🔷', color:'rgba(56,189,248,0.15)', iconColor:'#38bdf8',  title:'React — The Complete Guide',       issuer:'Udemy — Maximilian S.',   date:'2022' },
   { id:'c6', icon:'🏆', color:'rgba(251,146,60,0.15)', iconColor:'#fb923c',  title:'Node.js Developer Certificate',    issuer:'HackerRank',              date:'2021' },
+]
+
+// ── Gallery images ─────────────────────────────────────────────
+// Replace `src` with real image URLs (Cloudinary, S3, etc.)
+// Leave `src` empty to use the animated gradient placeholder.
+export const galleryImages: GalleryImage[] = [
+  {
+    id: 'g1',
+    alt: 'ShopVerse e-commerce dashboard UI',
+    title: 'ShopVerse Dashboard',
+    subtitle: 'Full-stack e-commerce admin panel with real-time analytics',
+    category: 'UI/UX',
+    span: 'tall',
+    gradient: 'linear-gradient(135deg,#6c63ff,#38bdf8)',
+    emoji: '🛒',
+    tags: ['Next.js', 'Tailwind', 'Chart.js'],
+  },
+  {
+    id: 'g2',
+    alt: 'TaskFlow Kanban board',
+    title: 'TaskFlow Kanban',
+    subtitle: 'Drag-and-drop project board with real-time collaboration',
+    category: 'UI/UX',
+    span: 'normal',
+    gradient: 'linear-gradient(135deg,#34d399,#06b6d4)',
+    emoji: '📝',
+    tags: ['React', 'Socket.io'],
+  },
+  {
+    id: 'g3',
+    alt: 'Node.js REST API architecture diagram',
+    title: 'Microservice API',
+    subtitle: 'Scalable Node.js microservice serving 10k+ daily requests',
+    category: 'Backend',
+    span: 'short',
+    gradient: 'linear-gradient(135deg,#fb923c,#f43f5e)',
+    emoji: '⚙️',
+    tags: ['Node.js', 'Express', 'Redis'],
+  },
+  {
+    id: 'g4',
+    alt: 'ChatSphere mobile messenger UI',
+    title: 'ChatSphere Mobile',
+    subtitle: 'End-to-end encrypted messaging with emoji reactions',
+    category: 'Mobile',
+    span: 'tall',
+    gradient: 'linear-gradient(135deg,#a78bfa,#ec4899)',
+    emoji: '💬',
+    tags: ['React Native', 'Socket.io'],
+  },
+  {
+    id: 'g5',
+    alt: 'AnalyticsPro data dashboard',
+    title: 'AnalyticsPro Charts',
+    subtitle: 'Real-time analytics with filterable multi-tenant reports',
+    category: 'UI/UX',
+    span: 'normal',
+    gradient: 'linear-gradient(135deg,#38bdf8,#34d399)',
+    emoji: '📊',
+    tags: ['Next.js', 'TypeScript', 'D3.js'],
+  },
+  {
+    id: 'g6',
+    alt: 'Open source component library',
+    title: 'UI Component Lib',
+    subtitle: 'Published npm package with 200+ GitHub stars',
+    category: 'Open Source',
+    span: 'short',
+    gradient: 'linear-gradient(135deg,#6c63ff,#a78bfa)',
+    emoji: '📦',
+    tags: ['React', 'TypeScript', 'npm'],
+  },
+  {
+    id: 'g7',
+    alt: 'MedBook appointment booking screen',
+    title: 'MedBook App',
+    subtitle: 'Doctor-patient booking with video consultation integration',
+    category: 'Mobile',
+    span: 'normal',
+    gradient: 'linear-gradient(135deg,#34d399,#6c63ff)',
+    emoji: '🏥',
+    tags: ['React Native', 'Node.js', 'AWS'],
+  },
+  {
+    id: 'g8',
+    alt: 'MongoDB schema design and indexing',
+    title: 'Database Architecture',
+    subtitle: 'Optimised MongoDB schema with 60% latency improvement',
+    category: 'Backend',
+    span: 'normal',
+    gradient: 'linear-gradient(135deg,#4ade80,#22d3ee)',
+    emoji: '🗄️',
+    tags: ['MongoDB', 'Redis', 'Docker'],
+  },
+  {
+    id: 'g9',
+    alt: 'DevBlog platform with MDX editor',
+    title: 'DevBlog Platform',
+    subtitle: 'SEO-optimised tech blog scoring 95+ on Lighthouse',
+    category: 'Open Source',
+    span: 'tall',
+    gradient: 'linear-gradient(135deg,#f59e0b,#ef4444)',
+    emoji: '✍️',
+    tags: ['Next.js', 'MDX', 'SEO'],
+  },
+  {
+    id: 'g10',
+    alt: 'CI/CD pipeline configuration',
+    title: 'CI/CD Pipeline',
+    subtitle: 'Automated GitHub Actions workflow with zero-downtime deploys',
+    category: 'Backend',
+    span: 'short',
+    gradient: 'linear-gradient(135deg,#8b5cf6,#3b82f6)',
+    emoji: '🚀',
+    tags: ['GitHub Actions', 'Docker', 'AWS'],
+  },
+  {
+    id: 'g11',
+    alt: 'Redux state management architecture',
+    title: 'State Architecture',
+    subtitle: 'Redux Toolkit + Zustand patterns for complex client state',
+    category: 'UI/UX',
+    span: 'short',
+    gradient: 'linear-gradient(135deg,#ec4899,#8b5cf6)',
+    emoji: '🔄',
+    tags: ['Redux', 'Zustand', 'React'],
+  },
+  {
+    id: 'g12',
+    alt: 'GraphQL API schema explorer',
+    title: 'GraphQL API',
+    subtitle: 'Type-safe GraphQL schema replacing legacy REST endpoints',
+    category: 'Backend',
+    span: 'normal',
+    gradient: 'linear-gradient(135deg,#e11d48,#f97316)',
+    emoji: '🔗',
+    tags: ['GraphQL', 'Apollo', 'Node.js'],
+  },
 ]
