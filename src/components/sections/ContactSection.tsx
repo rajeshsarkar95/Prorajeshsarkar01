@@ -15,7 +15,6 @@ const LINKS = [
   { label: 'GITHUB', value: 'Github', href: 'https://github.com/rajeshsarkar95', bg: 'rgba(167,139,250,0.15)', color: '#a78bfa', emoji: '🐙' },
   { label: 'LOCATION', value: 'Uttar Pradesh, India', href: null, bg: 'rgba(52,211,153,0.15)', color: '#34d399', emoji: '📍' },
 ]
-
 export default function ContactSection() {
   const [form, setForm] = useState<ContactForm>({ name: '', email: '', subject: '', message: '' })
   const [errors, setErrors] = useState<Partial<ContactForm>>({})
@@ -28,12 +27,12 @@ export default function ContactSection() {
     if (errors[name as keyof ContactForm]) setErrors((er) => ({ ...er, [name]: undefined }))
   }
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent)=>{
     e.preventDefault()
     const errs = validate(form)
     if (Object.keys(errs).length) { setErrors(errs); return }
     setSubmit(true)
-    await new Promise((r) => setTimeout(r, 1500))         
+    await new Promise((r) => setTimeout(r, 1500))
     setSuccess(true)
     setForm({ name: '', email: '', subject: '', message: '' })
     setSubmit(false)

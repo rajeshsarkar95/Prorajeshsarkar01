@@ -9,7 +9,7 @@ export default function SkillsSection() {
             Technical <span className="c-gradient-text">Expertise</span>
           </h2>
           <p className="c-section-desc">
-            Core technologies I use to build production-ready applications.
+            Core technologies I use to build production-ready applications
           </p>
         </div>
         <div

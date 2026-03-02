@@ -16,13 +16,13 @@ export const educations = [
       'Completed Science stream with a strong academic foundation in Physics, Chemistry, and Mathematics. Developed a deep interest in understanding scientific principles, numerical problem-solving, and analytical thinking. Consistently performed well in Mathematics and Physics, demonstrating logical reasoning and conceptual clarity. Actively engaged in practical experiments and academic assignments, strengthening both theoretical knowledge and application skills.',
   },
   {
-  id: '2',
-  institution: 'CGS Inter College',
-  degree: 'High School (Science Stream)',
-  period: '2021 – 2022',
-  description:
-    'Completed High School in Science stream with a strong academic foundation in Physics, Chemistry, and Mathematics. Developed solid analytical and problem-solving skills through consistent performance in Mathematics and Physics. Demonstrated logical reasoning, conceptual clarity, and a keen interest in scientific principles. Actively participated in laboratory experiments and academic activities, strengthening both theoretical understanding and practical application skills.'
-},
+    id: '2',
+    institution: 'CGS Inter College',
+    degree: 'High School (Science Stream)',
+    period: '2021 – 2022',
+    description:
+      'Completed High School in Science stream with a strong academic foundation in Physics, Chemistry, and Mathematics. Developed solid analytical and problem-solving skills through consistent performance in Mathematics and Physics. Demonstrated logical reasoning, conceptual clarity, and a keen interest in scientific principles. Actively participated in laboratory experiments and academic activities, strengthening both theoretical understanding and practical application skills.'
+  },
 ]
 
 export default function EducationSection() {

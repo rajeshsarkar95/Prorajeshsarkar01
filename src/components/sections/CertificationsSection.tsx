@@ -10,7 +10,6 @@ export default function CertificationsSection() {
           </h2>
           <p className="c-section-desc">Continuous learning through recognised certifications and courses.</p>
         </div>
-
         <div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
           role="list"

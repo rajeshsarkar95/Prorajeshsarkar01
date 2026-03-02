@@ -25,7 +25,6 @@ export default function AboutSection() {
             The person{" "}
             <span className="c-gradient-text italic">behind the code</span>
           </h2>
-
           <p className="text-lg text-[var(--text2)] leading-relaxed">
             Full-stack developer dedicated to building high-performance
             applications with a focus on maintainability and scalable
