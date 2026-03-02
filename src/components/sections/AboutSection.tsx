@@ -54,29 +54,40 @@ export default function AboutSection() {
             </div>
           </div>
           <div className="lg:col-span-7 space-y-6 reveal reveal-d2">
-            <div className="space-y-5">
-              <p className="text-lg leading-relaxed text-[var(--text2)]">
-                I&apos;m{" "}
-                <strong className="text-[var(--text)] font-semibold">
-                  Rajesh Sarkar
-                </strong>
-                , a Full Stack Developer specializing in the MERN stack.
-                With over 2 years of professional experience, I bridge the gap
-                between complex backend logic and seamless frontend experiences.
-              </p>
-              <p className="text-base leading-[1.8] text-[var(--text2)]">
-                My approach is rooted in technical excellence. I don&apos;t
-                just write code; I design systems. From crafting intuitive
-                React interfaces to architecting robust Node.js APIs and
-                optimized MongoDB schemas, I prioritize clean architecture
-                and developer experience to ensure production-ready scalability.
-              </p>
-              <p className="text-base leading-[1.8] text-[var(--text2)]">
-                Beyond the IDE, I continuously refine my workflow with
-                performance optimization patterns and explore emerging web
-                technologies to stay aligned with industry standards.
-              </p>
-            </div>
+            <section className="relative max-w-3xl py-4 antialiased">
+              <div className="absolute -left-6 top-0 hidden h-full w-[1px] bg-gradient-to-b from-transparent via-[var(--primary-color,#3b82f6)] to-transparent opacity-30 md:block" />
+              <div className="space-y-6">
+                <header className="space-y-2">
+                  <h2 className="text-3xl font-extrabold tracking-tight text-[var(--text)] sm:text-4xl">
+                    Rajesh Sarkar
+                  </h2>
+                  <p className="text-lg font-medium tracking-wide text-[var(--primary-color,#3b82f6)] uppercase">
+                    Full Stack Engineer • MERN Specialist
+                  </p>
+                </header>
+                <div className="space-y-5 text-lg leading-relaxed text-[var(--text2)]">
+                  <p>
+                    With <span className="font-semibold text-[var(--text)]">2+ years of professional experience</span>,
+                    I bridge the gap between complex backend logic and seamless frontend experiences.
+                    I don&apos;t just write code; <span className="italic text-[var(--text)]">I architect systems.</span>
+                  </p>
+                  <div className="grid gap-4 py-2 sm:grid-cols-2">
+                    <div className="rounded-lg border border-white/5 bg-white/[0.02] p-4 transition-colors hover:bg-white/[0.05]">
+                      <h4 className="mb-1 font-semibold text-[var(--text)] text-sm uppercase tracking-wider">Frontend</h4>
+                      <p className="text-sm">Crafting intuitive, high-performance React interfaces with optimized state management.</p>
+                    </div>
+                    <div className="rounded-lg border border-white/5 bg-white/[0.02] p-4 transition-colors hover:bg-white/[0.05]">
+                      <h4 className="mb-1 font-semibold text-[var(--text)] text-sm uppercase tracking-wider">Backend</h4>
+                      <p className="text-sm">Architecting robust Node.js APIs and scalable MongoDB schemas for production environments.</p>
+                    </div>
+                  </div>
+                  <p className="text-base">
+                    Beyond the IDE, I focus on <span className="underline decoration-[var(--primary-color,#3b82f6)] decoration-2 underline-offset-4">performance optimization patterns</span>
+                    and emerging web standards to ensure every line of code I ship is scalable and future-proof.
+                  </p>
+                </div>
+              </div>
+            </section>
             <div className="pt-6">
               <h3 className="text-sm font-semibold uppercase tracking-widest text-[var(--accent)] mb-4">
                 Core Principles

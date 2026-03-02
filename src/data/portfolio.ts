@@ -1,6 +1,7 @@
 import type { Skill, Project, Experience, Certification} from '@/types'
 
 export const skills: Skill[] = [
+  {name:"Javascipt",             pct:90},
   { name: 'React.js',            pct: 92 },
   { name: 'Next.js',             pct: 88 },
   { name: 'Node.js',             pct: 85 },

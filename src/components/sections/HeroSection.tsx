@@ -4,7 +4,6 @@ interface Stat {
   number: string;
   label: string;
 }
-
 interface FloatingTag {
   label: string;
   top?: string;
@@ -72,11 +71,11 @@ export default function HeroSection() {
             <h1 className="reveal-item font-syne font-black leading-[1.05] tracking-tight mb-4 text-[clamp(42px,5.5vw,72px)]" style={{ "--delay": "0.2s" } as any}>
               Hi, I&apos;m <br />
               <span className="bg-gradient-to-r from-[var(--accent)] via-[var(--accent3)] to-[var(--accent2)] bg-clip-text text-transparent italic">
-                Rajesh Sarkar
+                !!Rajesh 
               </span>
             </h1>
             <p className="reveal-item font-mono text-[var(--accent2)] text-sm mb-6 tracking-widest flex items-center gap-2" style={{ "--delay": "0.3s" } as any}>
-              <span className="text-[var(--text3)] opacity-50">&gt;</span> Full Stack Developer — MERN Stack
+              <span className="text-[var(--text3)] opacity-50">&gt;</span> Full Stack Software Engineer — MERN Stack
             </p>
             <p className="reveal-item text-[var(--text2)] text-lg leading-relaxed max-w-xl mb-10 opacity-90" style={{ "--delay": "0.4s" } as any}>
               I craft scalable, high-performance web applications from Uttar Pradesh, India. 

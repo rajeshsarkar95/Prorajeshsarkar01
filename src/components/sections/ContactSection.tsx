@@ -25,7 +25,6 @@ export default function ContactSection() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setForm((f) => ({ ...f, [name]: value }))
-    // clear error on change
     if (errors[name as keyof ContactForm]) setErrors((er) => ({ ...er, [name]: undefined }))
   }
 
@@ -34,7 +33,7 @@ export default function ContactSection() {
     const errs = validate(form)
     if (Object.keys(errs).length) { setErrors(errs); return }
     setSubmit(true)
-    await new Promise((r) => setTimeout(r, 1500))          // simulate API
+    await new Promise((r) => setTimeout(r, 1500))         
     setSuccess(true)
     setForm({ name: '', email: '', subject: '', message: '' })
     setSubmit(false)

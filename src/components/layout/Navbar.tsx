@@ -14,7 +14,6 @@ const NAV_LINKS = [
 function scrollTo(href: string) {
   document.querySelector(href)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
-
 export default function Navbar() {
   const { isDark, toggleTheme } = useTheme()
   const [scrolled, setScrolled]   = useState(false)
@@ -50,7 +49,7 @@ export default function Navbar() {
               aria-label="Go to top"
               className="font-syne text-[22px] font-black tracking-tight bg-gradient-to-r from-[var(--accent)] to-[var(--accent3)] bg-clip-text text-transparent"
             >
-              RS.
+              !!Rajesh
             </button>
             <ul className="hidden md:flex gap-9 list-none" role="list">
               {NAV_LINKS.map((l) => (
