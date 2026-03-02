@@ -2,10 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ── Google Fonts ─────────────────────────────────────────── */
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap');
 
-/* ── CSS custom properties (dark default) ─────────────────── */
+@layer components {
+  .reveal-item {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: professionalReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: var(--delay);
+  }
+}
+
+@keyframes professionalReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes floatTag {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+  66% {
+    transform: translateY(5px) rotate(-1deg);
+  }
+}
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.1); }
+}
+.perspective-1000 {
+  perspective: 1000px;
+}
 :root {
   --bg:       #0a0a0f;
   --bg2:      #111118;
@@ -26,8 +73,6 @@
   --glow2:    rgba(167,139,250,0.2);
   --shadow:   0 8px 40px rgba(0,0,0,0.5);
 }
-
-/* ── Light theme overrides ────────────────────────────────── */
 [data-theme='light'] {
   --bg:       #f4f4f8;
   --bg2:      #ffffff;
@@ -48,8 +93,6 @@
   --glow2:    rgba(124,58,237,0.15);
   --shadow:   0 8px 40px rgba(0,0,0,0.1);
 }
-
-/* ── Base reset & defaults ────────────────────────────────── */
 @layer base {
   *, *::before, *::after { box-sizing: border-box; }
 
@@ -73,37 +116,26 @@
     font-family: 'Syne', 'Segoe UI', system-ui, sans-serif;
     line-height: 1.15;
   }
-
-  /* Scrollbar */
   ::-webkit-scrollbar { width: 6px; }
   ::-webkit-scrollbar-track { background: var(--bg2); }
   ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
 }
 
-/* ── Reusable component classes ───────────────────────────── */
 @layer components {
-
-  /* Container */
   .c-container {
     @apply max-w-6xl mx-auto px-6;
   }
-
-  /* Section spacing */
   .c-section {
     @apply py-24 relative z-10;
   }
-
-  /* Section header */
   .c-section-tag {
     font-family: 'JetBrains Mono', monospace;
     @apply block text-xs tracking-[2px] uppercase mb-3;
     color: var(--accent2);
   }
-
   .c-section-title {
     @apply font-syne text-4xl md:text-5xl font-black tracking-[-1.5px] mb-4;
   }
-
   .c-section-desc {
     @apply text-base max-w-xl mx-auto leading-relaxed;
     color: var(--text2);
@@ -116,7 +148,6 @@
     background-clip: text;
   }
 
-  /* Buttons */
   .c-btn-primary {
     @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-dm font-semibold text-sm text-white transition-all duration-300;
     background: var(--accent);
@@ -138,7 +169,6 @@
     transform: translateY(-2px);
   }
 
-  /* Glass card */
   .c-card {
     border-radius: 16px;
     background: var(--surface);
@@ -151,8 +181,6 @@
     transform: translateY(-2px);
     box-shadow: 0 12px 40px var(--glow2);
   }
-
-  /* Nav link underline animation */
   .c-nav-link {
     @apply relative text-sm font-medium transition-colors duration-200;
     color: var(--text2);
@@ -165,7 +193,6 @@
   .c-nav-link:hover { color: var(--text); }
   .c-nav-link:hover::after { @apply scale-x-100; }
 
-  /* Skill bar */
   .c-skill-bar-fill {
     @apply h-full rounded-full w-0;
     background: linear-gradient(90deg, var(--accent), var(--accent3));

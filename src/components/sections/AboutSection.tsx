@@ -17,8 +17,6 @@ export default function AboutSection() {
       className="py-24 bg-[var(--bg2)] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-
-        {/* Heading */}
         <div className="max-w-2xl mb-16 reveal">
           <h2
             id="about-heading"
@@ -34,22 +32,14 @@ export default function AboutSection() {
             architecture.
           </p>
         </div>
-
-        {/* Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
-
-          {/* Image Section */}
           <div className="lg:col-span-5 flex justify-center lg:justify-start reveal">
             <div className="relative group">
-
-              {/* Rotating Border */}
               <div
                 className="absolute -inset-4 rounded-[40px] border border-[var(--border)] opacity-50 group-hover:border-[var(--accent)] transition-colors duration-500"
                 style={{ animation: "rotateRing 25s linear infinite" }}
                 aria-hidden="true"
               />
-
-              {/* Image Card */}
               <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-3xl overflow-hidden bg-[var(--surface)] shadow-2xl">
                 <Image
                   src="/profile/profile.png"
@@ -59,17 +49,12 @@ export default function AboutSection() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   priority
                 />
-
                 <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-3xl" />
               </div>
             </div>
           </div>
-
-          {/* Text Section */}
           <div className="lg:col-span-7 space-y-6 reveal reveal-d2">
-
             <div className="space-y-5">
-
               <p className="text-lg leading-relaxed text-[var(--text2)]">
                 I&apos;m{" "}
                 <strong className="text-[var(--text)] font-semibold">
@@ -79,7 +64,6 @@ export default function AboutSection() {
                 With over 2 years of professional experience, I bridge the gap
                 between complex backend logic and seamless frontend experiences.
               </p>
-
               <p className="text-base leading-[1.8] text-[var(--text2)]">
                 My approach is rooted in technical excellence. I don&apos;t
                 just write code; I design systems. From crafting intuitive
@@ -87,21 +71,16 @@ export default function AboutSection() {
                 optimized MongoDB schemas, I prioritize clean architecture
                 and developer experience to ensure production-ready scalability.
               </p>
-
               <p className="text-base leading-[1.8] text-[var(--text2)]">
                 Beyond the IDE, I continuously refine my workflow with
                 performance optimization patterns and explore emerging web
                 technologies to stay aligned with industry standards.
               </p>
-
             </div>
-
-            {/* Core Principles */}
             <div className="pt-6">
               <h3 className="text-sm font-semibold uppercase tracking-widest text-[var(--accent)] mb-4">
                 Core Principles
               </h3>
-
               <div className="flex flex-wrap gap-3" role="list">
                 {TRAITS.map((trait) => (
                   <span
@@ -114,7 +93,6 @@ export default function AboutSection() {
                 ))}
               </div>
             </div>
-
           </div>
         </div>
       </div>
