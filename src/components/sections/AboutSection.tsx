@@ -20,6 +20,7 @@ export default function AboutSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-center">
+
           <div className="lg:col-span-2 flex justify-center lg:justify-start reveal">
             <div className="relative">
               <div
@@ -28,18 +29,19 @@ export default function AboutSection() {
                 aria-hidden="true"
               />
               <div
-                className="relative w-64 h-64 rounded-[24px] flex items-center justify-center font-syne text-6xl font-black text-white"
+                className="relative w-64 h-64 rounded-2xl  flex items-center justify-center font-syne text-6xl font-black text-white"
                 style={{
                   background: 'linear-gradient(135deg, var(--accent), var(--accent3))',
                   boxShadow: '0 20px 60px var(--glow)',
                 }}
                 aria-label="RS initials avatar"
               >
-                <Image src="/images/Images.png" alt="" className="rounded-xl" width={400} height={400}/>
-                <div className="absolute inset-[8px] rounded-[18px] border-2 border-white/20" />
+                <Image src="/profile/profile.png" alt="" className="rounded-xl" width={1000} height={1000}/>
+                <div className="absolute inset-[8px] rounded-[18px] " />
               </div>
             </div>
           </div>
+
           <div className="lg:col-span-3 reveal reveal-d2">
             <p className="text-[var(--text2)] text-base leading-[1.85] mb-4">
               I&apos;m <strong className="text-[var(--text)] font-semibold">Rajesh Sarkar</strong>, a Full Stack
