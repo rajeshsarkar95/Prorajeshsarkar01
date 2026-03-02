@@ -5,7 +5,6 @@ export default function SkillsSection() {
     <section id="skills" aria-labelledby="skills-heading" className="c-section">
       <div className="c-container">
         <div className="text-center mb-16 reveal">
-          <span className="c-section-tag">02 — Skills</span>
           <h2 id="skills-heading" className="c-section-title">
             Technical <span className="c-gradient-text">Expertise</span>
           </h2>

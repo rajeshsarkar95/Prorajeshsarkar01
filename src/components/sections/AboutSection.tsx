@@ -10,7 +10,6 @@ export default function AboutSection() {
     <section id="about" aria-labelledby="about-heading" className="c-section bg-[var(--bg2)]">
       <div className="c-container">
         <div className="text-center mb-16 reveal">
-          <span className="c-section-tag">01 — About</span>
           <h2 id="about-heading" className="c-section-title">
             The person{' '}
             <span className="c-gradient-text">behind the code</span>

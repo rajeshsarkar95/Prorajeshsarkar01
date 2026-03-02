@@ -4,9 +4,7 @@ export default function CertificationsSection() {
   return (
     <section id="certifications" aria-labelledby="cert-heading" className="c-section bg-[var(--bg2)]">
       <div className="c-container">
-
         <div className="text-center mb-16 reveal">
-          <span className="c-section-tag">05 — Certifications</span>
           <h2 id="cert-heading" className="c-section-title">
             Learning &amp; <span className="c-gradient-text">Credentials</span>
           </h2>

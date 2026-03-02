@@ -4,25 +4,19 @@ export default function ExperienceSection() {
   return (
     <section id="experience" aria-labelledby="exp-heading" className="c-section">
       <div className="c-container">
-
         <div className="text-center mb-16 reveal">
-          <span className="c-section-tag">04 — Experience</span>
           <h2 id="exp-heading" className="c-section-title">
             Work <span className="c-gradient-text">History</span>
           </h2>
           <p className="c-section-desc">My professional journey building software that matters.</p>
         </div>
-
-        {/* Timeline */}
         <div className="relative max-w-[800px] mx-auto c-timeline" role="list" aria-label="Work experience">
-
           {experiences.map((e, i) => (
             <div
               key={e.id}
               role="listitem"
               className={`relative pl-[70px] mb-12 last:mb-0 reveal reveal-d${i + 1}`}
             >
-              {/* Dot */}
               <div
                 className="absolute left-3 top-2 w-[22px] h-[22px] rounded-full bg-[var(--accent)] border-[3px] border-[var(--bg)] flex items-center justify-center"
                 style={{ boxShadow: '0 0 16px var(--glow)' }}
@@ -30,8 +24,6 @@ export default function ExperienceSection() {
               >
                 <div className="w-2 h-2 rounded-full bg-white" />
               </div>
-
-              {/* Card */}
               <div className="p-6 px-7 rounded-2xl bg-[var(--surface)] border border-[var(--border)] transition-all hover:border-[var(--accent)] hover:bg-[var(--surface2)]">
                 <div className="flex flex-wrap justify-between items-start gap-3 mb-2">
                   <h3 className="font-syne text-lg font-bold text-[var(--text)]">{e.company}</h3>
@@ -53,7 +45,6 @@ export default function ExperienceSection() {
               </div>
             </div>
           ))}
-
         </div>
       </div>
     </section>

@@ -19,53 +19,72 @@ export const chips: string[] = [
 
 export const projects: Project[] = [
   {
-    id: 'shopverse', emoji: '🛒',
-    gradient: 'linear-gradient(135deg,#6c63ff,#38bdf8)', featured: true,
-    tags: ['Next.js','MongoDB','Redux','Stripe'],
-    title: 'ShopVerse — E-Commerce Platform',
-    desc: 'Full-featured e-commerce platform with product management, cart, Stripe payments, and admin dashboard. Handles 1,000+ concurrent users.',
-    demo: 'https://github.com/rajeshsarkar', github: 'https://github.com/rajeshsarkar',
+    id: 'shopverse',
+    emoji: '🛒',
+    image: '/images/projects/uphaarbox.png',
+    featured: true,
+    tags: ['Next.js', 'MongoDB', 'Redux', 'Stripe'],
+    title: 'uphaarbox.com — E-Commerce Platform',
+    desc: 'Full-featured e-commerce platform...',
+    demo: 'https://github.com/rajeshsarkar',
+    github: 'https://github.com/rajeshsarkar',
+    gradient: ''
   },
-  {
-    id: 'taskflow', emoji: '📝',
-    gradient: 'linear-gradient(135deg,#34d399,#38bdf8)',
-    tags: ['React','Node.js','MongoDB','Socket.io'],
-    title: 'TaskFlow — Project Manager',
-    desc: 'Real-time project management tool with drag-and-drop boards, team collaboration, live notifications, and Kanban views.',
-    demo: 'https://github.com/rajeshsarkar', github: 'https://github.com/rajeshsarkar',
-  },
-  {
-    id: 'chatsphere', emoji: '💬',
-    gradient: 'linear-gradient(135deg,#a78bfa,#fb923c)',
-    tags: ['React','Express','Socket.io','JWT'],
-    title: 'ChatSphere — Messenger App',
-    desc: 'End-to-end encrypted real-time messaging with rooms, file sharing, emoji reactions, and read receipts.',
-    demo: 'https://github.com/rajeshsarkar', github: 'https://github.com/rajeshsarkar',
-  },
-  {
-    id: 'analyticspro', emoji: '📊',
-    gradient: 'linear-gradient(135deg,#38bdf8,#34d399)',
-    tags: ['Next.js','TypeScript','Chart.js','MySQL'],
-    title: 'AnalyticsPro — Dashboard',
-    desc: 'Data analytics dashboard with real-time charts, filterable reports, CSV exports, and multi-tenant architecture.',
-    demo: 'https://github.com/rajeshsarkar', github: 'https://github.com/rajeshsarkar',
-  },
-  {
-    id: 'medbook', emoji: '🏥',
-    gradient: 'linear-gradient(135deg,#fb923c,#f87171)',
-    tags: ['React','Node.js','MongoDB','AWS S3'],
-    title: 'MedBook — Healthcare App',
-    desc: 'Doctor-patient appointment booking with e-prescriptions, medical records management, and video consultation integration.',
-    demo: 'https://github.com/rajeshsarkar', github: 'https://github.com/rajeshsarkar',
-  },
-  {
-    id: 'devblog', emoji: '🚀',
-    gradient: 'linear-gradient(135deg,#6c63ff,#a78bfa)',
-    tags: ['Next.js','TailwindCSS','MDX','SEO'],
-    title: 'DevBlog — Tech Blog Platform',
-    desc: 'SEO-optimised developer blog with MDX support, syntax highlighting, newsletter integration, and 95+ Lighthouse score.',
-    demo: 'https://github.com/rajeshsarkar', github: 'https://github.com/rajeshsarkar',
-  },
+{
+  id: 'taskflow',
+  emoji: '📝',
+  image: '/images/projects/Skillup.png',
+  tags: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
+  title: 'skillup —  edtech Project',
+  desc: 'Real-time project management tool with drag-and-drop boards, team collaboration, live notifications, and Kanban views.',
+  demo: 'https://github.com/rajeshsarkar',
+  github: 'https://github.com/rajeshsarkar',
+  gradient: ''
+},
+{
+  id: 'chatsphere',
+  emoji: '💬',
+  image: '/images/projects/colorplay.png',
+  gradient: 'linear-gradient(135deg,#a78bfa,#fb923c)',
+  tags: ['React','Express','Socket.io','JWT'],
+  title: 'ColorPlay — Images Generations',
+  desc: 'ColorPlay is a creative image generation platform that allows users to generate unique visuals using AI-',
+  demo: 'https://github.com/rajeshsarkar',
+  github: 'https://github.com/rajeshsarkar',
+},
+{
+  id: 'analyticspro',
+  emoji: '📊',
+  image: '/images/projects/hydrohaven.png',
+  tags: ['Next.js', 'TypeScript', 'Chart.js', 'MySQL'],
+  title: 'Hydrohaven — Dashboard',
+  desc: 'We provide Bitlote solutions designed to deliver seamless performance, reliability, and a smooth user experience.',
+  demo: 'https://github.com/rajeshsarkar',
+  github: 'https://github.com/rajeshsarkar',
+  gradient: ''
+},
+{
+  id: 'medbook',
+  emoji: '🏥',
+  image: '/images/projects/portfolio.png',
+  tags: ['React', 'Node.js', 'MongoDB', 'AWS S3'],
+  title: 'Portfolio — Healthcare App',
+  desc: 'Doctor-patient appointment booking with e-prescriptions, medical records management, and video consultation integration.',
+  demo: 'https://github.com/rajeshsarkar',
+  github: 'https://github.com/rajeshsarkar',
+  gradient: ''
+},
+{
+  id: 'devblog',
+  emoji: '🚀',
+  image: '/images/projects/portfolio2.png',
+  tags: ['Next.js', 'TailwindCSS', 'MDX', 'SEO'],
+  title: 'DevBlog — Tech Blog Platform',
+  desc: 'SEO-optimised developer blog with MDX support, syntax highlighting, newsletter integration, and 95+ Lighthouse score.',
+  demo: 'https://github.com/rajeshsarkar',
+  github: 'https://github.com/rajeshsarkar',
+  gradient: ''
+},
 ]
 
 export const experiences: Experience[] = [
@@ -106,9 +125,8 @@ export const certifications: Certification[] = [
   { id:'c6', icon:'🏆', color:'rgba(251,146,60,0.15)', iconColor:'#fb923c',  title:'Node.js Developer Certificate',    issuer:'HackerRank',              date:'2021' },
 ]
 
-// ── Gallery images ─────────────────────────────────────────────
-// Replace `src` with real image URLs (Cloudinary, S3, etc.)
-// Leave `src` empty to use the animated gradient placeholder.
+
+
 export const galleryImages: GalleryImage[] = [
   {
     id: 'g1',
