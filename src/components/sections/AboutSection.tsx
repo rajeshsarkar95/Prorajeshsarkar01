@@ -1,77 +1,82 @@
-import Image from "next/image"
+import Image from "next/image";
 
 const TRAITS = [
-  '🧱 Clean Architecture', '⚡ Performance First', '🎯 User-Focused',
-  '📈 Continuous Learner', '🔍 Detail Oriented', '🤝 Team Player',
-]
+  'Clean Architecture', 'Performance First', 'User-Focused',
+  'Continuous Learner', 'Detail Oriented', 'Team Player',
+];
 
 export default function AboutSection() {
   return (
-    <section id="about" aria-labelledby="about-heading" className="c-section bg-[var(--bg2)]">
-      <div className="c-container">
-        <div className="text-center mb-16 reveal">
-          <h2 id="about-heading" className="c-section-title">
-            The person{' '}
-            <span className="c-gradient-text">behind the code</span>
+    <section id="about" aria-labelledby="about-heading" className="py-24 bg-[var(--bg2)] overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-2xl mb-16 reveal">
+          <h2 id="about-heading" className="text-4xl md:text-5xl font-bold tracking-tight text-[var(--text)] mb-6">
+            The person <span className="c-gradient-text italic">behind the code</span>
           </h2>
-          <p className="c-section-desc">
-            Passionate developer with a love for clean architecture and performance-driven solutions.
+          <p className="text-lg text-[var(--text2)] leading-relaxed">
+            Full-stack developer dedicated to building high-performance applications with a focus on 
+            maintainability and scalable architecture.
           </p>
         </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-center">
-
-          <div className="lg:col-span-2 flex justify-center lg:justify-start reveal">
-            <div className="relative">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+          <div className="lg:col-span-5 flex justify-center lg:justify-start reveal">
+            <div className="relative group">
               <div
-                className="absolute rounded-[34px] border border-[var(--border)]"
-                style={{ inset: '-20px', animation: 'rotateRing 20s linear infinite' }}
+                className="absolute -inset-4 rounded-[40px] border border-[var(--border)] opacity-50 group-hover:border-[var(--accent)] transition-colors duration-500"
+                style={{ animation: 'rotateRing 25s linear infinite' }}
                 aria-hidden="true"
               />
-              <div
-                className="relative w-64 h-64 rounded-2xl  flex items-center justify-center font-syne text-6xl font-black text-white"
-                style={{
-                  background: 'linear-gradient(135deg, var(--accent), var(--accent3))',
-                  boxShadow: '0 20px 60px var(--glow)',
-                }}
-                aria-label="RS initials avatar"
-              >
-                <Image src="/profile/profile.png" alt="" className="rounded-xl" width={1000} height={1000}/>
-                <div className="absolute inset-[8px] rounded-[18px] " />
+              <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-3xl overflow-hidden bg-[var(--surface)] shadow-2xl">
+                <Image 
+                  src="/profile/profile.png" 
+                  alt="Rajesh Sarkar" 
+                  className="object-cover transition-transform duration-500 group-hover:scale-105" 
+                  fill
+                  sizes="(max-width: 768px) 288px, 320px"
+                  priority
+                />
+                <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-3xl" />
               </div>
             </div>
           </div>
+          <div className="lg:col-span-7 space-y-6 reveal reveal-d2">
+            <div className="prose prose-invert max-w-none">
+              <p className="text-lg leading-relaxed text-[var(--text2)]">
+                I&apos;m <strong className="text-[var(--text)] font-semibold">Rajesh Sarkar</strong>, a Full Stack 
+                Developer specializing in the MERN stack. With over 2 years of professional experience, 
+                I bridge the gap between complex backend logic and seamless frontend experiences.
+              </p>
+              
+              <p className="text-base leading-[1.8] text-[var(--text2)]">
+                My approach is rooted in **technical excellence**. I don't just write code; I design systems. 
+                From crafting intuitive React interfaces to architecting robust Node.js APIs and optimized 
+                MongoDB schemas, I prioritize clean architecture and developer experience to ensure 
+                production-ready scalability.
+              </p>
 
-          <div className="lg:col-span-3 reveal reveal-d2">
-            <p className="text-[var(--text2)] text-base leading-[1.85] mb-4">
-              I&apos;m <strong className="text-[var(--text)] font-semibold">Rajesh Sarkar</strong>, a Full Stack
-              Developer based in <strong className="text-[var(--text)] font-semibold">Uttar Pradesh, India</strong>,
-              specialising in the MERN stack. With 2+ years of professional experience I focus on building scalable,
-              efficient applications that deliver real value to users.
-            </p>
-            <p className="text-[var(--text2)] text-base leading-[1.85] mb-4">
-              My journey started with a curiosity for how the web works and quickly turned into a passion for crafting
-              every layer — from intuitive React interfaces to robust Node.js APIs and optimised MongoDB schemas. I care
-              deeply about clean architecture, developer experience, and making things that actually perform.
-            </p>
-            <p className="text-[var(--text2)] text-base leading-[1.85] mb-8">
-              When I&apos;m not coding I explore performance optimisation patterns, contribute to open source, and stay
-              current with the ever-evolving JavaScript ecosystem.
-            </p>
-            <div className="flex flex-wrap gap-2.5" role="list" aria-label="Personal traits">
-              {TRAITS.map((t) => (
-                <span
-                  key={t}
-                  role="listitem"
-                  className="px-4 py-2 rounded-[8px] border border-[var(--border)] bg-[var(--surface)] text-sm text-[var(--text2)] cursor-default transition-all hover:border-[var(--accent)] hover:text-[var(--text)] hover:bg-[var(--surface2)]"
-                >
-                  {t}
-                </span>
-              ))}
+              <p className="text-base leading-[1.8] text-[var(--text2)]">
+                Beyond the IDE, I am an active contributor to the JavaScript ecosystem, constantly 
+                refining my workflow with performance optimization patterns and exploring 
+                emerging web technologies.
+              </p>
+            </div>
+            <div className="pt-6">
+              <h3 className="text-sm font-semibold uppercase tracking-widest text-[var(--accent)] mb-4">Core Principles</h3>
+              <div className="flex flex-wrap gap-3" role="list">
+                {TRAITS.map((trait) => (
+                  <span
+                    key={trait}
+                    role="listitem"
+                    className="px-4 py-2 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--surface)] text-[var(--text2)] transition-all hover:border-[var(--accent)] hover:text-[var(--text)] hover:shadow-[0_0_15px_rgba(var(--accent-rgb),0.1)]"
+                  >
+                    {trait}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

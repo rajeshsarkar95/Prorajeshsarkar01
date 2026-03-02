@@ -3,10 +3,11 @@ import { useState, useEffect, useCallback } from 'react'
 import { useTheme } from '@/hooks/useTheme'
 
 const NAV_LINKS = [
-  { label: 'About',       href: '#about' },
-  { label: 'Skills',      href: '#skills' },
-  { label: 'Projects',    href: '#projects' },
-  { label: 'Experience',  href: '#experience' },
+  { label: 'About',       href: '#about'},
+  { label: 'Skills',      href: '#skills'},
+  { label: 'Projects',    href: '#projects'},
+  { label: 'Experience',  href: '#experience'},
+  {label:'Education',     href:"#Education"}, 
   { label: 'Contact',     href: '#contact' },
 ]
 
@@ -32,7 +33,6 @@ export default function Navbar() {
 
   return (
     <>
-      {/* ── Desktop / top bar ─────────────────────────────── */}
       <nav
         role="navigation"
         aria-label="Main navigation"
@@ -45,8 +45,6 @@ export default function Navbar() {
       >
         <div className="c-container">
           <div className="flex items-center justify-between h-[72px]">
-
-            {/* Logo */}
             <button
               onClick={() => scrollTo('#hero')}
               aria-label="Go to top"
@@ -54,8 +52,6 @@ export default function Navbar() {
             >
               RS.
             </button>
-
-            {/* Desktop links */}
             <ul className="hidden md:flex gap-9 list-none" role="list">
               {NAV_LINKS.map((l) => (
                 <li key={l.href}>
@@ -65,10 +61,7 @@ export default function Navbar() {
                 </li>
               ))}
             </ul>
-
-            {/* Actions */}
             <div className="flex items-center gap-3">
-              {/* Theme toggle */}
               <button
                 onClick={toggleTheme}
                 aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
@@ -76,8 +69,6 @@ export default function Navbar() {
               >
                 {isDark ? '🌙' : '☀️'}
               </button>
-
-              {/* Hire Me CTA */}
               <button
                 onClick={() => handleNav('#contact')}
                 className="hidden md:block c-btn-primary py-2 px-5 text-sm"
@@ -85,8 +76,6 @@ export default function Navbar() {
               >
                 Hire Me
               </button>
-
-              {/* Hamburger */}
               <button
                 onClick={() => setMenuOpen((o) => !o)}
                 aria-label={menuOpen ? 'Close menu' : 'Open menu'}
@@ -101,8 +90,6 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-
-      {/* ── Mobile menu ───────────────────────────────────── */}
       {menuOpen && (
         <div
           role="navigation"

@@ -6,7 +6,7 @@ export default function ExperienceSection() {
       <div className="c-container">
         <div className="text-center mb-16 reveal">
           <h2 id="exp-heading" className="c-section-title">
-            Work <span className="c-gradient-text">History</span>
+            Experience <span className="c-gradient-text"></span>
           </h2>
           <p className="c-section-desc">My professional journey building software that matters.</p>
         </div>
