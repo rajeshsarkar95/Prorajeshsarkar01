@@ -171,11 +171,7 @@ export default function BooksComponent() {
 
     return (
         <>
-            <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
-        * { box-sizing: border-box; }
-      `}</style>
-
+           
             <div
                 className="min-h-screen relative overflow-hidden"
                 style={{
