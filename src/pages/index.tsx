@@ -12,6 +12,7 @@ import ExperienceSection    from '@/components/sections/ExperienceSection'
 import CertificationsSection from '@/components/sections/CertificationsSection'
 import ContactSection       from '@/components/sections/ContactSection'
 import EducationSection from '@/components/sections/Educations'
+import BooksComponent from '@/components/sections/BooksSection'
 
 function AmbientOrbs() {
   return (
@@ -122,6 +123,7 @@ const Home: NextPage = () => {
         <AboutSection />
         <SkillsSection />
         <ProjectsSection />
+        <BooksComponent/>
         <ExperienceSection />
         <EducationSection/>
         <CertificationsSection />

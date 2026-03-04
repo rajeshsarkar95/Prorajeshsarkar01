@@ -44,7 +44,7 @@ export default function Navbar(): JSX.Element {
     if (href.startsWith("#")) {
       scrollToSection(href);
     } else {
-      window.location.href = href; // for /music route
+      window.location.href = href; 
     }
   }, []);
 
