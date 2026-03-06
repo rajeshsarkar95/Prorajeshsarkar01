@@ -36,7 +36,31 @@ const TRACKS: Track[] = [
         genre: "Jazz",
         videoId: "pvAsrsjtqi4",
     },
-];
+    {
+        id: "5",
+        title: "KITHE - Vishal Mishra",
+        genre: "love",
+        videoId: "Wn8g2_jWXBQ",
+    },
+    {
+        id: "6",
+        title: "Chadeya Fitoor",
+        genre: "love",
+        videoId: "RA8RMr__zjw",
+    },
+    {
+        id: "7",
+        title: "ISHQ MUBARAK",
+        genre: "love",
+        videoId: "V1oczq_8L0E"
+    },
+    {
+        id:"8",
+        title:"Dard",
+        genre:"love",
+        videoId:"iCZr-9Oennc"
+    }
+    ];
 
 function PlayerCard({
     title,
