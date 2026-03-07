@@ -63,8 +63,6 @@ export default function Navbar(): JSX.Element {
       >
         <div className="c-container">
           <div className="flex items-center justify-between h-[72px]">
-
-            {/* Logo */}
             <button
               onClick={() => scrollToSection("#hero")}
               aria-label="Go to top"
@@ -72,8 +70,6 @@ export default function Navbar(): JSX.Element {
             >
               !!Rajesh
             </button>
-
-            {/* Desktop Menu */}
             <ul className="hidden md:flex gap-9 list-none">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
@@ -86,11 +82,7 @@ export default function Navbar(): JSX.Element {
                 </li>
               ))}
             </ul>
-
-            {/* Right Section */}
             <div className="flex items-center gap-3">
-
-              {/* Theme Button */}
               <button
                 onClick={toggleTheme}
                 aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
@@ -98,16 +90,12 @@ export default function Navbar(): JSX.Element {
               >
                 {isDark ? "🌙" : "☀️"}
               </button>
-
-              {/* Hire Button */}
               <button
                 onClick={() => handleNav("#contact")}
                 className="hidden md:block c-btn-primary py-2 px-5 text-sm"
               >
                 Hire Me
               </button>
-
-              {/* Mobile Menu Button */}
               <button
                 onClick={() => setMenuOpen((prev) => !prev)}
                 aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -123,8 +111,6 @@ export default function Navbar(): JSX.Element {
           </div>
         </div>
       </nav>
-
-      {/* Mobile Menu */}
       {menuOpen && (
         <div
           role="navigation"

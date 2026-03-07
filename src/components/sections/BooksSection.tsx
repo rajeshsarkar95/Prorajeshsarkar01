@@ -67,7 +67,7 @@ const books: Book[] = [
         title: "Zero to One",
         author: "Peter Thiel",
         coverUrl: "https://covers.openlibrary.org/b/isbn/9780804139021-L.jpg",
-        status: "queue",
+        status: "completed",
     },
 ];
 
@@ -160,7 +160,14 @@ function BookCard({ book }: { book: Book }) {
 export default function BooksComponent() {
     const [activeTab, setActiveTab] = useState<"all" | ReadingStatus>("all");
 
-    const filtered = activeTab === "all" ? books : books.filter((b) => b.status === activeTab);
+    const filtered =
+  activeTab === "all"
+    ? [...books].sort(
+        (a, b) =>
+          ["completed", "reading", "queue"].indexOf(a.status) -
+          ["completed", "reading", "queue"].indexOf(b.status)
+      )
+    : books.filter((b) => b.status === activeTab);
 
     const tabs: { key: "all" | ReadingStatus; label: string; emoji: string }[] = [
         { key: "all", label: "All Books", emoji: "" },
