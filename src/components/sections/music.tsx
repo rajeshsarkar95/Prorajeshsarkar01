@@ -8,7 +8,6 @@ type Track = {
     genre: string;
     videoId: string;
 };
-
 type PlayerCardProps = Track;
 
 const TRACKS: Track[] = [
@@ -36,6 +35,12 @@ const TRACKS: Track[] = [
         genre: "Jazz",
         videoId: "pvAsrsjtqi4",
     },
+    {
+        id: "5",
+        title: "galat fehmi",
+        genre: "Radio",
+        videoId: "OzA5H9I95ng",
+    }
 ];
 
 function PlayerCard({
