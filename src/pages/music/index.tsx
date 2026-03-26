@@ -2,7 +2,7 @@ import MusicPlayer from "@/components/sections/music";
 
 import React from 'react'
 
-function index() {
+function index(){
   return (
     <div>
         <MusicPlayer/>

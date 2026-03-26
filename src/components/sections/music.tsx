@@ -8,7 +8,7 @@ type Track = {
     genre: string;
     videoId: string;
 };
-type PlayerCardProps = Track & {
+type PlayerCardProps = Track &{
     isActive: boolean;
     onPlay: () => void;
     onStop: () => void;
@@ -71,12 +71,10 @@ const GENRE_COLORS: Record<string, string> = {
     Ambient: "from-teal-400 to-cyan-600",
     Jazz: "from-amber-400 to-orange-500",
 };
-
 function getColor(genre: string) {
     return GENRE_COLORS[genre] ?? "from-blue-500 to-indigo-600";
 }
 
-// Animated sound bars
 function SoundBars() {
     return (
         <div className="flex items-end gap-[3px] h-5">
@@ -147,18 +145,14 @@ function PlayerCard({ title, genre, videoId, isActive, onPlay, onStop }: PlayerC
                     </button>
                 )}
             </div>
-
-            {/* Active glow */}
             {isActive && (
                 <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${color} opacity-5 pointer-events-none`} />
             )}
         </div>
     );
 }
-
 export default function MusicGrid() {
     const [activeId, setActiveId] = useState<string | null>(null);
-
     return (
         <main className="min-h-screen bg-slate-950 p-8 flex flex-col items-center">
             <div className="max-w-4xl w-full">
