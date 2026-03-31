@@ -97,8 +97,7 @@ function BookCard({ book }: { book: Book }) {
         <div
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
-            className="flex flex-col items-center gap-3 cursor-default group"
-        >
+            className="flex flex-col items-center gap-3 cursor-default group">
             <div
                 className="relative w-full rounded-2xl overflow-hidden transition-all duration-300"
                 style={{
@@ -107,8 +106,7 @@ function BookCard({ book }: { book: Book }) {
                     boxShadow: hovered
                         ? "0 24px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.12)"
                         : "0 6px 24px rgba(0,0,0,0.4)",
-                }}
-            >
+                }}>
                 {!imgError ? (
                     <Image
                         src={book.coverUrl}
@@ -161,13 +159,13 @@ export default function BooksComponent() {
     const [activeTab, setActiveTab] = useState<"all" | ReadingStatus>("all");
 
     const filtered =
-  activeTab === "all"
-    ? [...books].sort(
-        (a, b) =>
-          ["completed", "reading", "queue"].indexOf(a.status) -
-          ["completed", "reading", "queue"].indexOf(b.status)
-      )
-    : books.filter((b) => b.status === activeTab);
+        activeTab === "all"
+            ? [...books].sort(
+                (a, b) =>
+                    ["completed", "reading", "queue"].indexOf(a.status) -
+                    ["completed", "reading", "queue"].indexOf(b.status)
+            )
+            : books.filter((b) => b.status === activeTab);
 
     const tabs: { key: "all" | ReadingStatus; label: string; emoji: string }[] = [
         { key: "all", label: "All Books", emoji: "" },
@@ -178,7 +176,6 @@ export default function BooksComponent() {
 
     return (
         <>
-           
             <div
                 className="min-h-screen relative overflow-hidden"
                 style={{
