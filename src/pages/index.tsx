@@ -14,6 +14,7 @@ import ContactSection from '@/components/sections/ContactSection'
 import EducationSection from '@/components/sections/Educations'
 import BooksComponent from '@/components/sections/BooksSection'
 import ServicesGrid from '@/components/service/servicesgrid'
+import WhatsAppButton from '@/components/WhatsAppButton'
 
 
 function AmbientOrbs() {
@@ -129,10 +130,10 @@ const Home: NextPage = () => {
         <BooksComponent />
         <ExperienceSection />
         <EducationSection />
+        <WhatsAppButton/>
         <CertificationsSection />
         <ContactSection />
       </main>
-
       <Footer />
     </>
   )
