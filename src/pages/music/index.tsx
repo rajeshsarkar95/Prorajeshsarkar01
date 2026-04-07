@@ -1,5 +1,4 @@
 import MusicPlayer from "@/components/sections/music";
-
 import React from 'react'
 
 function index(){

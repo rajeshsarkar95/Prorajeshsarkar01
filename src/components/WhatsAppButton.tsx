@@ -5,25 +5,20 @@ interface WhatsAppButtonProps {
   message?: string;
 }
 
-const WhatsAppButton: React.FC<WhatsAppButtonProps>=({
+const WhatsAppButton:React.FC<WhatsAppButtonProps>=({
   phone = "919568755984",
   message = "Hey Rajesh, I visited your portfolio and was impressed by your projects. Id love to connect and discuss them further.",
-})=>{
+}) => {
   const encodedMessage = encodeURIComponent(message);
   const href = `https://wa.me/${phone}${message ? `?text=${encodedMessage}` : ""}`;
-  
+
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
-      className="
-        fixed bottom-5 right-5 
-        w-12 h-12 sm:w-14 sm:h-14 
-        flex items-center justify-center 
-        bg-[#25D366] hover:bg-[#20bc5a] 
-        rounded-full shadow-[0_4px_24px_rgba(37,211,102,0.4)] 
+      className="fixed bottom-5 right-5 w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center bg-[#25D366] hover:bg-[#20bc5a rounded-full shadow-[0_4px_24px_rgba(37,211,102,0.4)] 
         hover:shadow-[0_8px_32px_rgba(37,211,102,0.55)] 
         hover:scale-105 active:scale-95 
         transition-all duration-200 z-50

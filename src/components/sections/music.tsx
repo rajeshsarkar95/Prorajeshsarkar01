@@ -16,13 +16,13 @@ type PlayerCardProps = Track & {
 };
 
 const TRACKS: Track[] = [
-  { id: "1", title: "YouTube Radio Mix", genre: "Radio", language: "Hindi", videoId: "QQEu7GTa6zk" },
-  { id: "2", title: "Lo-Fi Chill", genre: "Lo-Fi", language: "Hindi", videoId: "3oOXPPRRbt0" },
-  { id: "4", title: "Jazz Vibes", genre: "Jazz", language: "Hindi", videoId: "pvAsrsjtqi4" },
-  { id: "5", title: "Galat Fehmi", genre: "Pop", language: "Hindi", videoId: "OzA5H9I95ng" },
-  { id: "6", title: "Dard", genre: "Sad", language: "Hindi", videoId: "AyLTRvvCjAo" },
-  { id: "7", title: "Your Title Here", genre: "Radio", language: "Hindi", videoId: "Pm5JZvGFpeQ" },
-  { id: "8", title: "Your Title Here", genre: "Radio", language: "Bengali", videoId: "7NORZaLoc3Y" },
+  { id: "1", title: "YouTube Radio Mix", genre: "Radio", language: "Hindi", videoId: "QQEu7GTa6zk"},
+  { id: "2", title: "Lo-Fi Chill", genre: "Lo-Fi", language: "Hindi", videoId: "3oOXPPRRbt0"},
+  { id: "4", title: "Jazz Vibes", genre: "Jazz", language: "Hindi", videoId: "pvAsrsjtqi4"},
+  { id: "5", title: "Galat Fehmi", genre: "Pop", language: "Hindi", videoId: "OzA5H9I95ng"},
+  { id: "6", title: "Dard", genre: "Sad", language: "Hindi", videoId: "AyLTRvvCjAo"},
+  { id: "7", title: "Your Title Here", genre: "Radio", language: "Hindi", videoId: "Pm5JZvGFpeQ"},
+  { id: "8", title: "Your Title Here", genre: "Radio", language: "Bengali", videoId: "7NORZaLoc3Y"},
 ];
 
 const LANGUAGE_CONFIG = {

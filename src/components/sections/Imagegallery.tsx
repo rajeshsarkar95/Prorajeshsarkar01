@@ -54,10 +54,10 @@ function PinIcon(): JSX.Element {
 function ZoomIcon(): JSX.Element {
     return (
         <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <circle cx="11" cy="11" r="8" />
-            <line x1="21" y1="21" x2="16.65" y2="16.65" />
-            <line x1="11" y1="8" x2="11" y2="14" />
-            <line x1="8" y1="11" x2="14" y2="11" />
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            <line x1="11" y1="8" x2="11" y2="14"/>
+            <line x1="8" y1="11" x2="14" y2="11"/>
         </svg>
     );
 }
@@ -69,7 +69,7 @@ interface FilterPillsProps {
     filtered: number;
 }
 
-function FilterPills({ activeTag, onTagChange, total, filtered }: FilterPillsProps): JSX.Element {
+function FilterPills({activeTag,onTagChange,total,filtered}:FilterPillsProps):JSX.Element {
     return (
         <div className="mb-8">
             <div className="flex flex-wrap gap-2 mb-4">
@@ -103,13 +103,12 @@ interface GalleryCardProps {
     onClick: (img: GalleryImage) => void;
 }
 
-function GalleryCard({ image, index, onClick }: GalleryCardProps): JSX.Element {
+function GalleryCard({image, index,onClick}:GalleryCardProps):JSX.Element {
     const c = TAG_STYLE[image.tag];
 
-    const handleKeyDown = (e: KeyboardEvent<HTMLDivElement>): void => {
+    const handleKeyDown = (e: KeyboardEvent<HTMLDivElement>): void =>{
         if (e.key === "Enter" || e.key === " ") onClick(image);
     };
-
     return (
         <div
             role="button"
@@ -138,7 +137,7 @@ function GalleryCard({ image, index, onClick }: GalleryCardProps): JSX.Element {
                 <span className={`inline-flex items-center gap-1.5 self-start px-2.5 py-1 rounded-full
           text-[10px] font-mono font-bold tracking-widest uppercase border mb-2
           ${c.text} ${c.bg} ${c.border}`}>
-                    <span className={`w-1.5 h-1.5 rounded-full ${c.dot}`} />
+                    <span className={`w-1.5 h-1.5 rounded-full ${c.dot}`}/>
                     {image.tag}
                 </span>
                 <p className="text-white font-bold text-base leading-tight mb-1">{image.label}</p>
@@ -150,7 +149,7 @@ function GalleryCard({ image, index, onClick }: GalleryCardProps): JSX.Element {
             <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/10 backdrop-blur-md
         flex items-center justify-center opacity-0 group-hover:opacity-100
         scale-75 group-hover:scale-100 transition-all duration-300">
-                <ZoomIcon />
+                <ZoomIcon/>
             </div>
         </div>
     );

@@ -13,6 +13,7 @@ interface Book {
 }
 
 const books: Book[] = [
+
     {
         id: 1,
         title: "Atomic Habits",
@@ -53,7 +54,7 @@ const books: Book[] = [
         title: "Deep Work",
         author: "Cal Newport",
         coverUrl: "https://covers.openlibrary.org/b/isbn/9781455586691-L.jpg",
-        status: "queue",
+        status: "reading",
     },
     {
         id: 7,
@@ -69,14 +70,20 @@ const books: Book[] = [
         coverUrl: "https://covers.openlibrary.org/b/isbn/9780804139021-L.jpg",
         status: "completed",
     },
+    {
+        id: 9,
+        title: "its ok okay not to be ok",  
+        author: "Cheryl Strayed",
+        coverUrl: "https://covers.openlibrary.org/b/isbn/9780399593481-L.jpg",
+        status: "reading",
+    }
 ];
 
-const statusConfig: Record<ReadingStatus, { label: string; bg: string; text: string }> = {
+const statusConfig: Record<ReadingStatus, {label:string; bg:string;text: string }> = {
     completed: { label: "Completed", bg: "#22c55e", text: "#fff" },
     reading: { label: "Currently Reading", bg: "#7c3aed", text: "#fff" },
     queue: { label: "Up Next", bg: "#f59e0b", text: "#fff" },
 };
-
 function StatusBadge({ status }: { status: ReadingStatus }) {
     const cfg = statusConfig[status];
     return (
