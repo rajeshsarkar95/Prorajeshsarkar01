@@ -16,7 +16,7 @@ interface FloatingTag {
 const STATS: Stat[] = [
   { number: "2+", label: "Years Exp." },
   { number: "15+", label: "Projects" },
-  { number: "15+", label: "Technologies" },
+  { number: "36+", label: "Technologies" },
 ];
 
 const FLOATING_TAGS: FloatingTag[] = [
