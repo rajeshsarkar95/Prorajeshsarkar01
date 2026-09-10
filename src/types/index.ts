@@ -5,11 +5,13 @@ export interface Skill {
   name: string
   pct: number
   icon?: IconType | LucideIcon
+  color?:string;
 }
 
 export interface Chip {
   name: string
   icon?: IconType | LucideIcon
+  color?:string;
 }
 
 export interface Project {
