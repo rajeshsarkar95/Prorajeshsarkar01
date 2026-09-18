@@ -23,5 +23,4 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
     </p>
   </div>
 );
-
 export default SectionHeader;
