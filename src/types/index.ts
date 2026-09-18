@@ -6,6 +6,7 @@ export interface Skill {
   pct: number
   icon?: IconType | LucideIcon
   color?:string;
+  desc?:string;
 }
 
 export interface Chip {

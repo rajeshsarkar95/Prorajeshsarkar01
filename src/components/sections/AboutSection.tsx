@@ -14,7 +14,7 @@ export default function AboutSection() {
     <section
       id="about"
       aria-labelledby="about-heading"
-      className="py-24 bg-[var(--bg2)] overflow-hidden"
+      className="py-2 bg-[var(--bg2)] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="max-w-2xl mb-16 reveal">

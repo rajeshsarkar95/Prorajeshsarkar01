@@ -49,8 +49,9 @@ export default function SkillsSection() {
                       </span>
                     )}
                   </div>
+
                   <div className="flex-1 min-w-0">
-                    <div className="flex justify-between items-center mb-2 gap-2">
+                    <div className="flex justify-between items-center mb-0.5 gap-2">
                       <span className="font-syne font-bold text-sm sm:text-[15px] text-[var(--text)] truncate">
                         {s.name}
                       </span>
@@ -58,8 +59,15 @@ export default function SkillsSection() {
                         {s.pct}%
                       </span>
                     </div>
+
+                    {s.desc && (
+                      <p className="text-xs md:text-sm text-[var(--text2)] leading-relaxed tracking-wide font-normal mb-3 opacity-90 line-clamp-2 sm:line-clamp-none transition-opacity duration-200 hover:opacity-100">
+                        {s.desc}
+                      </p>
+                    )}
+
                     <div
-                      className="h-[5px] sm:h-[6px] rounded-full overflow-hidden"
+                      className="h-[5px] sm:h-[6px] rounded-full overflow-hidden mt-2"
                       style={{ background: 'var(--border)' }}
                       role="progressbar"
                       aria-valuenow={s.pct}
