@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { projects } from "@/data/portfolio"
 import type { Project } from "@/types"
+import { article, div } from "framer-motion/client";
 
 function ProjectCard({ p, idx }: { p: Project; idx: number }) {
   return (
@@ -11,29 +12,29 @@ function ProjectCard({ p, idx }: { p: Project; idx: number }) {
       className={`group relative rounded-2xl overflow-hidden border border-[var(--border)] bg-[var(--bg3)] transition-all duration-300 hover:border-[var(--accent)] hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] reveal reveal-d${(idx % 3) + 1}`}
     >
       {p.featured && (
-        <div className="absolute top-3.5 right-3.5 z-20 px-3 py-1 rounded-full bg-[var(--accent)] text-white text-[11px] font-semibold">
+        <div className="absolute top-2.5 right-2.5 sm:top-3.5 sm:right-3.5 z-20 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-[var(--accent)] text-white text-[10px] sm:text-[11px] font-semibold">
           ⭐ Featured
         </div>
       )}
-      <div className="relative h-48 overflow-hidden bg-[var(--bg)]">
+      <div className="relative h-40 sm:h-44 md:h-48 overflow-hidden bg-[var(--bg)]">
         <Image
           src={p.image}
           alt={p.title}
           fill
-          sizes="(max-width: 768px) 100vw, 33vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
         />
         <div
           className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500"
           style={{ background: p.gradient }}
         />
-        <div className="absolute bottom-3 right-3 text-2xl z-10 drop-shadow-lg">
+        <div className="absolute bottom-2.5 right-2.5 sm:bottom-3 sm:right-3 text-xl sm:text-2xl z-10 drop-shadow-lg">
           {p.emoji}
         </div>
       </div>
-      <div className="p-6">
+      <div className="p-4 sm:p-5 md:p-6">
         <div
-          className="flex flex-wrap gap-1.5 mb-3.5"
+          className="flex flex-wrap gap-1.5 mb-3 sm:mb-3.5"
           role="list"
           aria-label="Technologies used"
         >
@@ -41,19 +42,19 @@ function ProjectCard({ p, idx }: { p: Project; idx: number }) {
             <span
               key={t}
               role="listitem"
-              className="px-2.5 py-1 rounded-md bg-[var(--surface)] border border-[var(--border)] font-mono text-[11px] text-[var(--accent2)]"
+              className="px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md bg-[var(--surface)] border border-[var(--border)] font-mono text-[10px] sm:text-[11px] text-[var(--accent2)]"
             >
               {t}
             </span>
           ))}
         </div>
-        <h3 className="font-syne text-lg font-bold leading-tight mb-2.5 text-[var(--text)]">
+        <h3 className="font-syne text-base sm:text-lg font-bold leading-tight mb-2 sm:mb-2.5 text-[var(--text)]">
           {p.title}
         </h3>
-        <p className="text-sm text-[var(--text2)] leading-relaxed mb-5">
+        <p className="text-[13px] sm:text-sm text-[var(--text2)] leading-relaxed mb-4 sm:mb-5">
           {p.desc}
         </p>
-        <div className="flex gap-3">
+        <div className="flex flex-col xs:flex-row gap-2.5 sm:gap-3">
           <a
             href={p.demo}
             target="_blank"
@@ -107,7 +108,7 @@ export default function ProjectsSection() {
       className="c-section bg-[var(--bg2)]"
     >
       <div className="c-container">
-        <div className="text-center mb-16 reveal">
+        <div className="text-center mb-10 sm:mb-14 md:mb-16 reveal px-4 sm:px-0">
           <h2 id="projects-heading" className="c-section-title">
             Featured <span className="c-gradient-text">Work</span>
           </h2>
@@ -117,7 +118,7 @@ export default function ProjectsSection() {
         </div>
 
         <div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6"
           role="list"
           aria-label="Portfolio projects"
         >
