@@ -59,11 +59,11 @@ export default function SkillsSection() {
                       </span>
                     </div>
 
-                    {s.desc && (
+                    {/* {s.desc && (
                       <p className="text-xs md:text-sm text-[var(--text2)] leading-relaxed tracking-wide font-normal mb-3 opacity-90 line-clamp-2 sm:line-clamp-none transition-opacity duration-200 hover:opacity-100">
                         {s.desc}
                       </p>
-                    )}
+                    )} */}
 
                     <div
                       className="h-[5px] sm:h-[6px] rounded-full overflow-hidden mt-2"

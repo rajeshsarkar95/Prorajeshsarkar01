@@ -82,8 +82,8 @@ export const projects: Project[] = [
     tags: ['Next.js', 'MongoDB', 'Redux Toolkit', 'Stripe'],
     title: 'UphaarBox — Pilibhit Local E-Commerce Platform',
     desc: 'Built a local e-commerce platform for Pilibhit with product browsing, secure payments, order management, and an admin dashboard.',
-    demo: 'https://github.com/rajeshsarkar',
-    github: 'https://github.com/rajeshsarkar95',
+    demo: 'https://github.com/rajeshsarkar95?tab=repositories',
+    github: 'https://github.com/rajeshsarkar95?tab=repositories',
     gradient: ''
   },
   {
@@ -94,7 +94,7 @@ export const projects: Project[] = [
     tags: ["Next.js", "Node.js", "MongoDB", "Express"],
     title: "Pathology Management System",
     desc: "A comprehensive pathology management system for efficient lab operations, patient management, and test result tracking.",
-    demo: "",
+    demo: "https://github.com/rajeshsarkar95?tab=repositories",
     gradient: '',
     github: 'https://github.com/rajeshsarkar95'
   },
@@ -108,7 +108,7 @@ export const projects: Project[] = [
     desc: "A comprehensive school management system for efficient administration, student tracking, and communication.",
     demo: "https://school-management-system-eta.vercel.app/",
     gradient: '',
-    github: 'https://github.com/rajeshsarkar95'
+    github: 'https://github.com/rajeshsarkar95?tab=repositories'
   },
   {
     id: 'taskflow',
@@ -118,8 +118,8 @@ export const projects: Project[] = [
     tags: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
     title: 'skillup —  edtech Project',
     desc: 'Real-time project management tool with drag-and-drop boards, team collaboration, live notifications, and Kanban views.',
-    demo: 'https://github.com/rajeshsarkar',
-    github: 'https://github.com/rajeshsarkar95',
+    demo: 'https://github.com/rajeshsarkar95?tab=repositories',
+    github: 'https://github.com/rajeshsarkar95?tab=repositories',
     gradient: ''
   },
   {
@@ -130,7 +130,7 @@ export const projects: Project[] = [
     tags: ['React', 'Express', 'Socket.io', 'JWT'],
     title: 'ColorPlay — Images Generations',
     desc: 'ColorPlay is a creative image generation platform that allows users to generate unique visuals using AI-',
-    demo: 'https://github.com/rajeshsarkar',
+    demo: 'https://github.com/rajeshsarkar95?tab=repositories',
     github: 'https://github.com/rajeshsarkar95',
   },
   {
@@ -140,7 +140,7 @@ export const projects: Project[] = [
     tags: ['Next.js', 'TypeScript', 'Chart.js', 'MySQL'],
     title: 'Hydrohaven — Dashboard',
     desc: 'We provide Bitlote solutions designed to deliver seamless performance, reliability, and a smooth user experience.',
-    demo: 'https://github.com/rajeshsarkar',
+    demo: 'https://github.com/rajeshsarkar95?tab=repositories',
     github: 'https://github.com/rajeshsarkar95',
     gradient: ''
   },
@@ -151,8 +151,8 @@ export const projects: Project[] = [
     tags: ['React', 'Node.js', 'MongoDB', 'AWS S3'],
     title: 'Portfolio — Healthcare App',
     desc: 'Doctor-patient appointment booking with e-prescriptions, medical records management, and video consultation integration.',
-    demo: 'https://github.com/rajeshsarkar',
-    github: 'https://github.com/rajeshsarkar95',
+    demo: 'https://github.com/rajeshsarkar95?tab=repositories',
+    github: 'https://github.com/rajeshsarkar95?tab=repositories',
     gradient: ''
   },
   {
@@ -162,8 +162,8 @@ export const projects: Project[] = [
     tags: ['Next.js', 'TailwindCSS', 'MDX', 'SEO'],
     title: 'DevBlog — Tech Blog Platform',
     desc: 'SEO-optimised developer blog with MDX support, syntax highlighting, newsletter integration, and 95+ Lighthouse score.',
-    demo: 'https://github.com/rajeshsarkar',
-    github: 'https://github.com/rajeshsarkar95',
+    demo: 'https://github.com/rajeshsarkar95?tab=repositories',
+    github: 'https://github.com/rajeshsarkar95?tab=repositories',
     gradient: ''
   },
 ]
