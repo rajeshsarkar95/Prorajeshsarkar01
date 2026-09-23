@@ -3,77 +3,81 @@
 import Image from "next/image"
 import { projects } from "@/data/portfolio"
 import type { Project } from "@/types"
-import { article, div } from "framer-motion/client";
 
 function ProjectCard({ p, idx }: { p: Project; idx: number }) {
   return (
     <article
       role="listitem"
-      className={`group relative rounded-2xl overflow-hidden border border-[var(--border)] bg-[var(--bg3)] transition-all duration-300 hover:border-[var(--accent)] hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] reveal reveal-d${(idx % 3) + 1}`}
+      className={`group relative rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--bg3)] transition-all duration-300 hover:border-[var(--accent)] hover:-translate-y-0.5 reveal reveal-d${(idx % 3) + 1}`}
     >
-      {p.featured && (
-        <div className="absolute top-2.5 right-2.5 sm:top-3.5 sm:right-3.5 z-20 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-[var(--accent)] text-white text-[10px] sm:text-[11px] font-semibold">
-          ⭐ Featured
-        </div>
-      )}
       <div className="relative h-40 sm:h-44 md:h-48 overflow-hidden bg-[var(--bg)]">
         <Image
           src={p.image}
           alt={p.title}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+          className="object-cover transition-all duration-700 group-hover:scale-105"
         />
         <div
           className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500"
           style={{ background: p.gradient }}
         />
+
+        {p.featured && (
+          <div className="absolute top-3 left-3 sm:top-3.5 sm:left-3.5 z-20 flex items-center gap-1.5 text-white text-[11px] font-semibold tracking-wide drop-shadow">
+            <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)]" aria-hidden="true" />
+            Featured
+          </div>
+        )}
+
         <div className="absolute bottom-2.5 right-2.5 sm:bottom-3 sm:right-3 text-xl sm:text-2xl z-10 drop-shadow-lg">
           {p.emoji}
         </div>
       </div>
+
       <div className="p-4 sm:p-5 md:p-6">
+        <h3 className="font-syne text-base sm:text-lg font-bold leading-tight mb-1.5 sm:mb-2 text-[var(--text)]">
+          {p.title}
+        </h3>
+
+        <p className="text-[13px] sm:text-sm text-[var(--text2)] leading-relaxed mb-3 sm:mb-4">
+          {p.desc}
+        </p>
+
         <div
-          className="flex flex-wrap gap-1.5 mb-3 sm:mb-3.5"
+          className="flex flex-wrap items-center gap-x-2.5 gap-y-1 mb-4 sm:mb-5 font-mono text-[11px] text-[var(--accent2)]"
           role="list"
           aria-label="Technologies used"
         >
-          {p.tags.map((t) => (
-            <span
-              key={t}
-              role="listitem"
-              className="px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md bg-[var(--surface)] border border-[var(--border)] font-mono text-[10px] sm:text-[11px] text-[var(--accent2)]"
-            >
+          {p.tags.map((t, i) => (
+            <span key={t} role="listitem" className="flex items-center gap-2.5">
+              {i > 0 && <span className="text-[var(--border2)]" aria-hidden="true">·</span>}
               {t}
             </span>
           ))}
         </div>
-        <h3 className="font-syne text-base sm:text-lg font-bold leading-tight mb-2 sm:mb-2.5 text-[var(--text)]">
-          {p.title}
-        </h3>
-        <p className="text-[13px] sm:text-sm text-[var(--text2)] leading-relaxed mb-4 sm:mb-5">
-          {p.desc}
-        </p>
-        <div className="flex flex-col xs:flex-row gap-2.5 sm:gap-3">
+
+        <div className="flex items-center justify-between gap-4 pt-1">
           <a
             href={p.demo}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Live demo of ${p.title}`}
-            className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-[9px] bg-[var(--accent)] text-white text-[13px] font-semibold transition-all hover:bg-[var(--accent2)] hover:shadow-accent"
+            className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-[var(--text)] transition-colors hover:text-[var(--accent2)]"
           >
+            View project
             <svg
-              width="13"
-              height="13"
+              width="12"
+              height="12"
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
               viewBox="0 0 24 24"
               aria-hidden="true"
+              className="transition-transform duration-200 group-hover:translate-x-0.5"
             >
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+              <path d="M7 17 17 7M9 7h8v8" />
             </svg>
-            Live Demo
           </a>
 
           <a
@@ -81,18 +85,11 @@ function ProjectCard({ p, idx }: { p: Project; idx: number }) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`GitHub repo of ${p.title}`}
-            className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-[9px] bg-[var(--surface)] border border-[var(--border2)] text-[var(--text2)] text-[13px] font-semibold transition-all hover:bg-[var(--surface2)] hover:text-[var(--text)] hover:border-[var(--accent)]"
+            className="inline-flex items-center justify-center w-8 h-8 rounded-md text-[var(--text2)] transition-colors hover:text-[var(--text)] hover:bg-[var(--surface)]"
           >
-            <svg
-              width="13"
-              height="13"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.420-.225-1.020-.780-.015-.795.945-.015 1.620.870 1.845 1.230 1.080 1.815 2.805 1.305 3.495.990.105-.780.420-1.305.765-1.605-2.670-.300-5.460-1.335-5.460-5.925 0-1.305.465-2.385 1.230-3.225-.120-.300-.540-1.530.120-3.180 0 0 1.005-.315 3.300 1.230.960-.270 1.980-.405 3-.405s2.040.135 3 .405c2.295-1.560 3.300-1.230 3.300-1.230.660 1.650.240 2.880.120 3.180.765.840 1.230 1.905 1.230 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.810 1.095.810 2.220 0 1.605-.015 2.895-.015 3.300 0 .315.225.690.825.570A12.020 12.020 0 0 0 24 12c0-6.630-5.370-12-12-12z" />
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
             </svg>
-            GitHub
           </a>
         </div>
       </div>
@@ -102,19 +99,23 @@ function ProjectCard({ p, idx }: { p: Project; idx: number }) {
 
 export default function ProjectsSection() {
   return (
-    <section
-      id="projects"
-      aria-labelledby="projects-heading"
-      className="c-section bg-[var(--bg2)]"
-    >
+    <section id="projects" aria-labelledby="projects-heading" className="c-section bg-[var(--bg2)]">
       <div className="c-container">
-        <div className="text-center mb-10 sm:mb-14 md:mb-16 reveal px-4 sm:px-0">
-          <h2 id="projects-heading" className="c-section-title">
-            Featured <span className="c-gradient-text">Work</span>
-          </h2>
-          <p className="c-section-desc">
-            A selection of projects showcasing full-stack capabilities and design thinking.
-          </p>
+        {/* Header: same masthead split used in the skills section, for consistency across sections */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 mb-12 sm:mb-16 reveal items-end px-4 sm:px-0">
+          <div className="md:col-span-7">
+            <h2
+              id="projects-heading"
+              className="font-syne font-bold text-[var(--text)] text-3xl sm:text-4xl md:text-[2.75rem] leading-[1.08] tracking-tight"
+            >
+              Featured work
+            </h2>
+          </div>
+          <div className="md:col-span-5">
+            <p className="text-sm sm:text-[15px] leading-relaxed text-[var(--text2)] md:text-right">
+              A selection of projects showcasing full-stack capabilities and design thinking.
+            </p>
+          </div>
         </div>
 
         <div
